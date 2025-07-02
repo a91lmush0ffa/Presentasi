@@ -6,6 +6,7 @@
   --contras-1: rgb(57, 62, 70);
   --contras-2: rgb(148, 137, 121);
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -109,11 +110,9 @@ body {
   position: absolute;
   width: 100%;
   height: 15%;
-  background: linear-gradient(
-    0deg,
-    rgba(1, 1, 1, 0.5) 8%,
-    rgba(207, 155, 95, 0) 50%
-  );
+  background: linear-gradient(0deg,
+      rgba(1, 1, 1, 0.5) 8%,
+      rgba(207, 155, 95, 0) 50%);
   bottom: 0;
 }
 
@@ -184,7 +183,9 @@ body {
 }
 
 .about .row .about-img {
-  flex: 1 1 45rem;
+  /* flex: 1 1 35rem; */
+  /* background-color: aqua; */
+  width: 20rem;
 }
 
 .about .row .about-img img {
@@ -193,7 +194,21 @@ body {
 
 .about .row .content {
   flex: 1 1 35rem;
-  padding: 0 2rem;
+  padding: 1rem 3rem;
+}
+
+.about .row .about-img-besar {
+  flex: 1 1 35rem;
+  padding: 1rem 0rem;
+}
+
+.about .row .about-img-besar img {
+  width: 95%;
+}
+
+.about .row .about-img {
+  flex: 1 1 35rem;
+  padding: 1rem 0rem;
 }
 
 .about .row .content h3 {
@@ -233,7 +248,11 @@ body {
 
 .menu-content .row .menu-card img {
   border-radius: 50%;
-  width: 70%;
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  background-position: center;
+
   border: 1px solid var(--primary-2);
 }
 
@@ -251,6 +270,7 @@ body {
   width: 100%;
   flex: 1 1 45rem;
   object-fit: cover;
+  background-color: aqua;
 }
 
 .contact .row form {
@@ -311,6 +331,7 @@ footer .links a:hover {
 footer .links {
   margin-bottom: 1.3rem;
 }
+
 footer .links a {
   text-decoration: none;
   padding: 0.7rem 1rem;
@@ -335,8 +356,9 @@ footer .credit a {
     font-size: 75%;
   }
 }
+
 /* tablet */
-@media (max-width: 758px) {
+@media (max-width: 795px) {
   html {
     font-size: 62.5%;
   }
@@ -351,11 +373,11 @@ footer .credit a {
     position: absolute;
     top: 100%;
     right: -100%;
-    background: url(../img/navbar.jpg);
+    /* background: url(../img/navbar.jpg); */
     background-size: cover;
     background-position: left;
-    width: 25rem;
-    height: 100vh;
+    width: 9rem;
+    height: 50vh;
     /* border-left: 1px solid var(--contras-2); */
     border-top: 1px solid var(--contras-2);
   }
@@ -368,8 +390,8 @@ footer .credit a {
     color: var(--contras-2);
     display: block;
     margin: 1.5rem;
-    padding: 0.5rem 1.5rem;
-    font-size: 1.9rem;
+    padding: 0.2rem 1rem;
+    font-size: 1.4rem;
   }
 
   .navbar .navbar-nav a::after {
@@ -416,13 +438,16 @@ footer .credit a {
   .contact .row .map {
     height: 30rem;
   }
+
   .contact .row form {
     padding-top: 1.5rem;
   }
+
   .menu-content .row .menu-card {
     width: 45%;
   }
 }
+
 /* mobile phone */
 @media (max-width: 450px) {
   html {
